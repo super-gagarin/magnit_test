@@ -1,5 +1,7 @@
+--psql (PostgreSQL) 14.2
+--Предварительно в БД созданы и загружены из csv файлов таблицы "Продажи 2" и "Справочник товаров 2"
+--На основе таблиц "Продажи 2" и "Справочник товаров 2" создаем таблицу abc_analysis
 --drop table IF EXISTS abc_analysis;
---На основе таблиц "Продажи 2" и "Справочник товаров 2"
 CREATE TABLE IF NOT EXISTS abc_analysis (
   year integer,
   store_format varchar(100),
@@ -9,6 +11,7 @@ CREATE TABLE IF NOT EXISTS abc_analysis (
   revenue real
  );
 
+--Загружаем в таблицу abc_analysis данные из таблиц "Продажи 2" и "Справочник товаров 2"
 insert into abc_analysis (
   year,
   store_format,
@@ -29,6 +32,11 @@ JOIN "Справочник товаров 2" т ON п.product = т.product
 group by year, п.store_format, т.category, п.product
 order by year, п.store_format, т.category, п.product
 
+--Проводим ABC анализ для всех позиций в разрезе Год (YEAR), STORE_FORMAT, CATEGORY, 
+--используя показатель оборот в рублях, оборот в штуках, поделив на 3 категории:
+--85 % - A
+--10 % - B
+--5 % - C
 select t.year,
        t.store_format,
        t.category,
