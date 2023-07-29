@@ -5,5 +5,5 @@
     Решение задания 2 VBA.xlsm - файл с решением на VBA;<br />
     Решение задания 2.sql - листинг на SQL, для СУБД PostgreSQL ver. 14.2;<br />
   Решение задания 1.sql - листинг на SQL (PostgreSQL ver. 14.2) по заданию 1;
-  <a href='https://github.com/super-gagarin/magnit_test/blob/main/Тестирование%20соискателей.xlsm' >Тестирование соискателей</a>
+  <a href='[https://github.com/super-gagarin/magnit_test/blob/main/Тестирование%20соискателей.xlsm](https://github.com/super-gagarin/magnit_test/raw/main/Тестирование%20соискателей.xlsm)https://github.com/super-gagarin/magnit_test/raw/main/Тестирование%20соискателей.xlsm' >Тестирование соискателей</a>
 </pre>
